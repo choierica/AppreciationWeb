@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {background-color:lightblue;}
+
+.wrapper > div{
+		background:#eee;
+        padding:1em;
+        }
+.wrapper > div:nth-child(odd){
+		background:lightblue;
+        }
+.boxed {
+  border: 1px solid darkblue ;
+}
+</style>
+<script>
+     function onMsgSubmit(){
+        var msg_area_value = document.getElementById("msg_area").value;
+        document.getElementById("post_messages").innerHTML += msg_area_value + '<br/>';
+    }
+    function onFireButton(){
+      document.getElementById("msg_area").value = '#firefighter';
+    }
+    function onPopoButton(){
+      document.getElementById("msg_area").value='#police';
+    }
+    function onVetButton(){
+      document.getElementById("msg_area").value='#veteran';
+    }
+    function onParButton(){
+      document.getElementById("msg_area").value='#paramedic';
+    }
+
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+<div>
+    <font><strong><h2 align="center" >APPRECIATION AWARENESS</h2></strong></font>  
+</div>
+<div>
+<p align="center" > Civilian society to thank first responders and Veterans for their service send a virtual poppy, thank you letter, and/or thank you video to veterans and/or first responders for their service </p>
+</div>
+<div align="center">
+<button style="height:50px;width:250px" type="button" onclick="alert('Type message')"> <font size="5">Message</font> </button>
+
+<input type="file" id="myFileInput" style="display:none" />
+<button style="height:50px;width:250px" input type="button" onclick="document.getElementById('myFileInput').click()" value="Select a File"/>
+       <font size="5">Video/Picture</font>
+      </button>
+
+<button style="height:50px;width:250px" type="button" onclick="alert('Design/Upload your poppy')"> <font size="5">Poppy</font></button>
+</div>
+</div>
+
+ <form align="center"><input type="text" size="102" placeholder="Name Here"> </form>
+<br>
+   <div align="center" class="text">
+        <textarea rows="10" cols="100" placeholder="Post Here" id="msg_area" ></textarea>
+ <div align="center">
+<button type="button" onclick="onFireButton()"> #firefighter</button>
+<button type="button" onclick="onPopoButton()">#police</button>
+<button type="button" onclick="onVetButton()">#veteran</button>
+<button type="button" onclick="onParButton()">#paramedic</button>
+</body>
+</div>
+<input type="submit" onclick="onMsgSubmit()" style="height:50px; width:295px"/>
+
+        
+      </div>
+<div align="right" >    
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=TESTTTTTTTTTTT"
+  data-size="large">
+Tweet</a>
+
+<a target="_blank" href="https://www.facebook.com/sharer/">
+<img src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook40x40.png" border=0></a>
+
+ <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+</div>  
+<br>
+
+
+<br>
+
+<label> Category </label>
+<br/>
+
+<select name="category">
+        <option value = "1"> Firefighter </option>
+        <option value = "2"> Police </option>
+        <option value = "3"> Veteran </option> 
+        <option value = "4"> Paramedic </option>           
+</select>
+
+<div class="boxed" align="center" id='post_messages'>
+</div>
+
+</body>
+</html>
